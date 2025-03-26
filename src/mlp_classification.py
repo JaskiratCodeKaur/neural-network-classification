@@ -14,8 +14,8 @@ Special Cases:
 - Data_1.csv uses GridSearchCV for MLP hyperparameter tuning.
 - Data_4.csv uses GridSearchCV to find the best Decision Tree hyperparameters.
 
-For Data_4.csv, I ran the GridSearchCV to optimize Decision Tree parameters, but even the best configuration 
-(max_depth=5, min_samples_split=10) only achieved ~70.8% accuracy. This further confirms that the dataset 
+For Data_4.csv, I ran the GridSearchCV to optimize Decision Tree parameters, but even the best configuration
+(max_depth=5, min_samples_split=10) only achieved ~70.8% accuracy. This further confirms that the dataset
 is better handled by models capable of learning nonlinear boundaries, such as the MLP, which achieved 92% accuracy.
 
 UCI Machine Repository Dataset Reference: https://archive.ics.uci.edu/dataset/813/tunadromd
@@ -26,11 +26,11 @@ Author: Jaskirat Kaur
 
 # Define dataset paths
 file_paths = {
-    "Data_1.csv": "Dataset/Data_1.csv",
-    "Data_2.csv": "Dataset/Data_2.csv",
-    "Data_3.csv": "Dataset/Data_3.csv",
-    "Data_4.csv": "Dataset/Data_4.csv",
-    "TUANDROMD.csv": "Dataset/TUANDROMD.csv"
+    "Data_1.csv": "../Dataset/Data_1.csv",
+    "Data_2.csv": "../Dataset/Data_2.csv",
+    "Data_3.csv": "../Dataset/Data_3.csv",
+    "Data_4.csv": "../Dataset/Data_4.csv",
+    "TUANDROMD.csv": "../Dataset/TUANDROMD.csv"
 }
 
 # Custom tuned configurations per file
@@ -89,7 +89,7 @@ for file_name, path in file_paths.items():
         }
         # Run GridSearchCV for MLP
         mlp_grid = MLPClassifier(max_iter=200, tol=1e-4, early_stopping=True,n_iter_no_change=10, random_state=42)
-        
+
         # Run grid search for Decision Tree
         grid_search = GridSearchCV(mlp_grid, param_grid, cv=5, scoring='accuracy', n_jobs=-1)
         grid_search.fit(features_train, labels_train)

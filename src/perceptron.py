@@ -82,10 +82,10 @@ class Perceptron:
 
 # Define dataset file paths
 file_paths = {
-    "Data_1.csv": "Dataset/Data_1.csv",
-    "Data_2.csv": "Dataset/Data_2.csv",
-    "Data_3.csv": "Dataset/Data_3.csv",
-    "Data_4.csv": "Dataset/Data_4.csv"
+    "Data_1.csv": "../Dataset/Data_1.csv",
+    "Data_2.csv": "../Dataset/Data_2.csv",
+    "Data_3.csv": "../Dataset/Data_3.csv",
+    "Data_4.csv": "../Dataset/Data_4.csv"
 }
 
 # Dictionary to store results
