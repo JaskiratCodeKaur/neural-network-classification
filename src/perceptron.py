@@ -22,7 +22,7 @@ from sklearn.linear_model import Perceptron as SKPerceptron
 class Perceptron:
     """
     The implementation of the Perceptron learning algorithm.
-    
+
     Attributes:
         learning_rate (float): The step size for weight updates.
         epochs (int): The number of iterations over the training data.
@@ -38,7 +38,7 @@ class Perceptron:
     def fit(self, features, labels):
         """
         Train the Perceptron using the given features and labels.
-        
+
         Args:
             features (numpy.ndarray): The input data.
             labels (numpy.ndarray): The target labels (0 or 1).
