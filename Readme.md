@@ -1,4 +1,4 @@
-# Neural Network Classification & Image Analysis
+# Neural Network Classification
 
 This project implements classical neural network models for classification tasks, including:
 - **Custom Perceptron** vs **Scikit-Learn Perceptron**
